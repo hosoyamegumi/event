@@ -1,6 +1,6 @@
 <?php
 
-//require_once '../session.php';
+require_once '../session.php';
 require_once '../db_inc.php';
 
 $login_id="";
