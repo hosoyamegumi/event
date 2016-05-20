@@ -1,6 +1,7 @@
 <?php
+session_start();
 
-require_once '../session.php';
+//require_once '../session.php';
 require_once '../db_inc.php';
 
 $login_id="";
@@ -37,12 +38,13 @@ if($_SERVER['REQUEST_METHOD']==="POST"){
 
 
 			if($info !=FALSE){
-				$_SESSION["name"]=$info["name"];
 				$_SESSION['authenticated']=TRUE;
+				$_SESSION["name"]=$info["name"];
 				$_SESSION["type_id"]=$info["type_id"];
 
 				var_dump($_SESSION);
-				header("Location:p_event_today.php");
+
+				header("Location:../event/p_event_today.php");
 				exit;
 		}
 		else {
