@@ -1,12 +1,14 @@
 <?php
 require_once "util.inc.php";
 require_once "db.inc.php";
+require_once 'session.php';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="utf-8" />
 <title>本日のイベント｜EventManager</title>
+<link href="../../css/reset.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../css/layout.css" />
 </head>
 <body>
