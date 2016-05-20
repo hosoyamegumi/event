@@ -42,7 +42,7 @@ if($_SERVER['REQUEST_METHOD']==="POST"){
 				$_SESSION["type_id"]=$info["type_id"];
 
 				var_dump($_SESSION);
-				//header("Location:p_event_today.php");
+				header("Location:p_event_today.php");
 				exit;
 		}
 		else {
