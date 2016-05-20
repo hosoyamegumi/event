@@ -1,7 +1,8 @@
 <?php
-require_once "util.inc.php";
-require_once "db.inc.php";
-require_once 'session.php';
+require_once "../session.php";
+require_once "../util.inc.php";
+require_once "../db_inc.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">
