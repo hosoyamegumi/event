@@ -9,7 +9,7 @@
 		<li><a href="event/p_event_list.php">イベント管理</a></li>
 		<li><a href="user/p_user_list.php">ユーザー管理</a></li>
 		<!-- <?php if ($type_id == 2) { echo "<li><a href='user/p_user_list.php'>ユーザー管理</a></li>";}; ?> -->
-		<li><!-- <?php echo $u_name; ?> -->ユーザー名</li>
+		<li><!-- <?php echo h($u_name); ?> -->ユーザー名</li>
 	  </ul>
 	</div>
 </div>
