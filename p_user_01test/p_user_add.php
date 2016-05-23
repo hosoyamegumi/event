@@ -37,7 +37,7 @@
 		<!-- u_name -->
 		    <dt>氏名(必須)
 		<!-- u_name_error -->
-			  <?php if (isset($u_mameError)): ?>
+			  <?php if (isset($u_nameError)): ?>
 			  <span class="error"><?php echo h($u_nameError); ?></span>
 			  <?php endif; ?>
 			</dt>
