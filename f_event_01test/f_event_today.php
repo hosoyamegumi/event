@@ -1,6 +1,6 @@
 <?php
-require_once '../util.inc.php';
-require_once '../../view/db.inc.php';
+//require_once '../util.inc.php';
+require_once '../../php/db.inc.php';
 
 try {
 

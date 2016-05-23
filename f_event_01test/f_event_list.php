@@ -8,6 +8,9 @@ try {
   //--------------------
   $pdo = db_init();
 
+  //user 1番さん
+  $user_id=1;
+
   //ページの数を決めるための条件
   $sql = "SELECT COUNT(*) AS hits FROM events";
   $stmt = $pdo->query($sql);
@@ -36,14 +39,18 @@ try {
   // 在庫リストの取得
   //--------------------
   $sql = "SELECT * FROM events
-  ORDER BY
-  created DESC
-  LIMIT {$offset},5";
-
+  LEFT JOIN attends
+  ON events.id= attends.event_id
+  ORDER BY start DESC LIMIT {$offset},5";
   $stmt = $pdo->query($sql);
   $events = $stmt->fetchAll();
 
-  //var_dump($events);
+
+//   $sql="SELECT * FROM events";
+//   $stmt = $pdo->query($sql);
+//   $id = $stmt->fetchAll();
+
+  var_dump($events);
 
   //--------------------
   // DB接続の解放
