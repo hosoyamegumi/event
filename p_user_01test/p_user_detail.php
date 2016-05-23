@@ -27,12 +27,6 @@
 	  <div id="main">
 	    <h1>ユーザ詳細</h1>
 
-	<!-- page -->
-		<div id="page">
-		  <p>ページの表示</p>
-		  <?php //echo $this->pagination->create_links(); ?>
-		</div>
-
 	<!-- dl -->
 		<dl>
 		  <dt>ID</dt>
