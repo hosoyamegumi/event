@@ -82,12 +82,15 @@ if($_SERVER['REQUEST_METHOD']==="POST"){
 <?php if(isset($ErrorLogin)):?>
 <?php echo $ErrorLogin;?>
 <?php endif;?>
-<P><input type="text" name="login_id" value=""
-placeholder="ログインID"></P>
 
 <?php if(isset($ErrorPass)):?>
 <?php echo $ErrorPass;?>
 <?php endif;?>
+
+<P><input type="text" name="login_id" value=""
+placeholder="ログインID"></P>
+
+
 <p><input type="password" name="login_pass" value=""
 placeholder="パスワード"></p>
 <input type="submit" value="ログイン">
