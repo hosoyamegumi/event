@@ -47,7 +47,7 @@ require_once "../db.inc.php";
 			  <td><?php echo h($user["u_id"]); ?></td>
 			  <td><?php echo h($user["start"]); ?></td>
 			  <td><?php echo h($user["place"]); ?></td>
-			  <td><?php echo h($user["group_id"]); ?></td>
+			  <td><?php echo h($user["g_name"]); ?></td>
 			  <td>
 			    <a href ="p_user_detail.php?id=<?php echo h($user["id"]); ?>"><input type="submit" name="detail" value="詳細" class="button_001"></a>
 			  </td>
