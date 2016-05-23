@@ -32,7 +32,7 @@
 		  <dt>ID</dt>
 		  <dd><?php echo h($u_id); ?></dd>
 		  <dt>氏名</dt>
-		  <dd><?php echo h($u_mane); ?></dd>
+		  <dd><?php echo h($u_name); ?></dd>
 		  <dt>所属グループ</dt>
 		  <dd><?php echo h($g_name); ?></dd>
 		</dl>
