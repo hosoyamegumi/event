@@ -14,6 +14,8 @@ if($_SERVER['REQUEST_METHOD']==="POST"){
 
 	$isValidated=TRUE;
 
+
+
 	if($login_id===""){
 		$ErrorId="ログインIDを入力してください";
 		$isValidated=FALSE;
@@ -73,17 +75,20 @@ if($_SERVER['REQUEST_METHOD']==="POST"){
 
 <form action="" method="post">
 
-<?php if($login_id==="") :?>
+<?php if(isset($ErrorId)) :?>
 <?php echo $ErrorId;?>
 <?php endif;?>
 
-
+<?php if(isset($ErrorLogin)):?>
+<?php echo $ErrorLogin;?>
+<?php endif;?>
 <P><input type="text" name="login_id" value=""
 placeholder="ログインID"></P>
-<?php if($login_pass===""):?>
+
+<?php if(isset($ErrorPass)):?>
 <?php echo $ErrorPass;?>
 <?php endif;?>
-<p><input type="text" name="login_pass" value=""
+<p><input type="password" name="login_pass" value=""
 placeholder="パスワード"></p>
 <input type="submit" value="ログイン">
 
