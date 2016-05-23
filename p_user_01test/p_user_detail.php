@@ -40,7 +40,7 @@
 		  <dt>氏名</dt>
 		  <dd><?php echo h($u_mane); ?></dd>
 		  <dt>所属グループ</dt>
-		  <dd><?php echo h($group_id); ?></dd>
+		  <dd><?php echo h($g_name); ?></dd>
 		</dl>
 
 	<!-- button -->
