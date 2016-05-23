@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8" />
-<title>イベント登録｜EventManager</title>
+<title>イベント削除｜EventManager</title>
 <link href="../../css/reset.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../css/layout.css" />
 </head>
