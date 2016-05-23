@@ -46,11 +46,11 @@ require_once 'session.php';
 		<p>対象グループ</p>
 		<p>
 			<select name="group_id">
-			<option>全員</option>
-			<option>管理部</option>
-			<option>総務部</option>
-			<option>人事部</option>
-			</select>
+			    <option value="1">管理部</option>
+			    <option value="2">総務部</option>
+			    <option value="3">人事部</option>
+			    <option value="4">その他</option>
+			  </select>
 		</p>
 		<p>詳細</p>
 			<p><textarea name="detail" value="<?php echo h($detail);?>"></textarea></p>
