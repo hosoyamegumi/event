@@ -14,7 +14,7 @@
 	<meta charset="utf-8">
 	<title>ユーザー登録｜EventManager</title>
 	<link href="../../css/reset.css" rel="stylesheet">
-	<link href="../css/layout.css" rel="stylesheet">
+	<link href="../../css/layout.css" rel="stylesheet">
   </head>
 
 <!-- body -->
@@ -59,7 +59,7 @@
 			  <span class="error"><?php echo h($login_passError); ?></span>
 			  <?php endif; ?>
 			</dt>
-			<dd><input type="text" name="login_pass" value="<?php echo h($login_pass); ?>"></dd>
+			<dd><input type="text" name="login_pass"></dd>
 
 		<!-- g_mane -->
 			<dt>所属グループ(必須)
