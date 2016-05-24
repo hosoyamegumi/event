@@ -80,8 +80,8 @@
 
 		<!-- button -->
 		  <p>
-			<a href="p_user_list.php"><input type="submit" name="cancel" value="キャンセル" id="buttom_03"></a>
-			<a href="p_user_add_done.php"><input type="submit" name="add" value="登録" id="button_01"></a>
+			<input type="submit" name="cancel" value="キャンセル" id="buttom_03">
+			<input type="submit" name="add" value="登録" id="button_01">
 		  </p>
 		</form>
 	  </div>
