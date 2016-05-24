@@ -1,5 +1,5 @@
 <?php
-//require_once '../session.php';
+require_once '../session.php';
 require_once '../util.inc.php';
 require_once '../db.inc.php';
 //ポスト処理が行われたとき
@@ -13,7 +13,7 @@ $title="";
 $start="";
 $end="";
 $place="";
-$group="";
+$group_id="";
 $detail="";
 
 	//「追加」ボタンが押された場合の処理
@@ -25,9 +25,10 @@ $detail="";
 	$start=$_POST["start"];
 	$end=$_POST["end"];
 	$place=$_POST["place"];
-	$group=$_POST["group"];
+	$group_id=$_POST["group_id"];
 	$detail=$_POST["detail"];
-	$registered_by=$_SESSION['id'];
+// 	$registered_by=$_SESSION['u_id'];
+	$registered_by=1;
 // 	$title='テスト';
 // 	$start='2016-05-20 11:30:06';
 // 	$end='2016-05-20 11:30:06';
@@ -35,26 +36,32 @@ $detail="";
 // 	$group=1;
 // 	$detail="テスト";
 // 	$registered_by=1;
-// 	//タイトルが空のとき
-// 	if(preg_match("/{\s　}/", $title)){
-// 		$titleError="※タイトルを入力して下さい";
-// 		$isValidated=FALSE;
-// 	}
-// 	//日付は「0000-00-00」の形式で入力してください。
-// 	elseif(!preg_match("/^\d{4}-\d{2}-\d{2}[\s　]\d{2}:\d{2}:\d{2}$/", $start)){
-// 		$startError="日付は「0000-00-00 00:00:00」の形式で入力してください。";
-// 		$isValidated=FALSE;
-// 	}
-// 	elseif(!preg_match("/^\d{4}-\d{2}-\d{2}[\s　]\d{2}:\d{2}:\d{2}$/", $end)){
-// 		$startError="日付は「0000-00-00 00:00:00」の形式で入力してください。";
-// 		$isValidated=FALSE;
-// 	}
-// 	//場所が空のとき
-// 	if(preg_match("/{\s　}/", $place)){
-// 		$placeError="※場所を入力して下さい";
-// 		$isValidated=FALSE;
-// 	}
-	if($isValidated==TRUE){
+
+ 	//タイトルのバリデーション
+	if($title === ""){
+ 		$titleError="※タイトルを入力して下さい";
+ 		$isValidated=FALSE;
+ 	}
+
+ 	//開催日時のバリデーション
+	if(!preg_match("/^\d{4}-\d{2}-\d{2}[\s　]\d{2}:\d{2}:\d{2}$/", $start)){
+ 		$startError="日付は「0000-00-00 00:00:00」の形式で入力してください。";
+ 		$isValidated=FALSE;
+ 	}
+
+ 	//終了日時のバリデーション
+ 	if(!preg_match("/^\d{4}-\d{2}-\d{2}[\s　]\d{2}:\d{2}:\d{2}$/", $end)){
+ 		$endError="日付は「0000-00-00 00:00:00」の形式で入力してください。";
+ 		$isValidated=FALSE;
+ 	}
+
+	//場所のバリデーション
+ 	if($place === ""){
+ 		$placeError="※場所を入力して下さい";
+ 		$isValidated=FALSE;
+ 	}
+
+ 	if($isValidated==TRUE){
 		try {
 			//--------------------
 			// データベースの準備
@@ -68,7 +75,9 @@ $detail="";
 					VALUES
 					(? ,? ,? ,? ,1 ,? ,1 ,NOW() )");
 			$eventAdd->execute(array($title, $start, $end, $place, $detail));
-			echo "ここまで";
+			header("Location: p_event_add_done.php");
+			exit;
+
 			//--------------------
 			// DB接続の解放
 			//--------------------
@@ -82,7 +91,7 @@ $detail="";
 //	}
 	//キャンセルボタンが押されたときの処理
 	if(isset($_POST["cancel"])){
-		header("Location: index.php");
+		header("Location: p_event_list.php");
 		exit;
 	}
 }
