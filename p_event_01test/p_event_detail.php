@@ -14,7 +14,7 @@ require_once "db.inc.php";
 	<script src="../js/jquery-loader.js"></script>
 
  	<link rel="stylesheet" href="../../css/remodal.css">
-    <link rel="stylesheet" href="../../css/remodal-default-theme.css">
+    <link rel="stylesheet" href="../../css/remodal-default-theme.css"><script src="../src/jquery-loader.js"></script>
     <script src="../js/remodal.js"></script>
 
     <style>
@@ -64,9 +64,11 @@ require_once "db.inc.php";
 <p class="comment">本当に削除してよろしいですか？</p>
   <a data-remodal-action="close" class="remodal-close"></a>
 
-  <a data-remodal-action="cancel" class="remodal-cancel" href="p_event_detail.php">Cancel</a>
-  <a data-remodal-action="" class="remodal-confirm" href="p_event_delete_done.php">OK</a>
-
+<!-- button -->
+<form method="post">
+		<input type="submit" name="cancel" value="Cancel" id="button_01">
+		<input type="submit" name="ok" value="OK" id="button_01">
+</form>
 </div>
 
 </body>
