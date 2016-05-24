@@ -39,9 +39,9 @@
 
 	<!-- button -->
 		<p>
-		  <a href="p_user_list.php"><input type="submit" name="cancel" value="一覧に戻る" id="button_02"></a>
-		  <a href="p_user_edit.php"><input type="submit" name="edit" value="編集" id="button_04"></a>
-		  <a href="p_user_delete.php"><input type="submit" name="delete" value="削除" id="button_03"></a>
+		  <input type="submit" name="cancel" value="一覧に戻る" id="button_02">
+		  <input type="submit" name="edit" value="編集" id="button_04">
+		  <input type="submit" name="delete" value="削除" id="button_03">
 		</p>
 
 	  </div>
