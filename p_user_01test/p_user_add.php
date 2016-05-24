@@ -41,7 +41,7 @@
 			  <span class="error"><?php echo h($u_nameError); ?></span>
 			  <?php endif; ?>
 			</dt>
-			<dd><input type="text" name="u_name"></dd>
+			<dd><input type="text" name="u_name" value="<?php echo h($u_name); ?>" placeholder="氏名"></dd>
 
 		<!-- login_id -->
 			<dt>ログインID(必須)
@@ -50,7 +50,7 @@
 			  <span class="error"><?php echo h($login_idError); ?></span>
 			  <?php endif; ?>
 			</dt>
-			<dd><input type="text" name="login_id"></dd>
+			<dd><input type="text" name="login_id" value="<?php echo h($login_id); ?>" placeholder="ログインID"></dd>
 
 		<!-- login_pass -->
 			<dt>パスワード(必須)
@@ -59,7 +59,7 @@
 			  <span class="error"><?php echo h($login_passError); ?></span>
 			  <?php endif; ?>
 			</dt>
-			<dd><input type="text" name="login_pass"></dd>
+			<dd><input type="text" name="login_pass" placeholder="パスワード"></dd>
 
 		<!-- g_mane -->
 			<dt>所属グループ(必須)
@@ -70,10 +70,10 @@
 			</dt>
 			<dd>
 			  <select name="group_id">
-			    <option value="1">管理部</option>
-			    <option value="2">総務部</option>
-			    <option value="3">人事部</option>
-			    <option value="4">その他</option>
+			    <option value="1" <?php if ($group_id === "1")   echo 'selected="selected"'; ?>>管理部</option>
+			    <option value="2" <?php if ($group_id === "2")   echo 'selected="selected"'; ?>>総務部</option>
+			    <option value="3" <?php if ($group_id === "3")   echo 'selected="selected"'; ?>>人事部</option>
+			    <option value="4" <?php if ($group_id === "4")   echo 'selected="selected"'; ?>>その他</option>
 			  </select>
 			</dd>
 		  </dl>
