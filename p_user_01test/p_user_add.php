@@ -41,7 +41,7 @@
 			  <span class="error"><?php echo h($u_nameError); ?></span>
 			  <?php endif; ?>
 			</dt>
-			<dd><input type="text" name="u_name" value="<?php echo h($u_name); ?>"></dd>
+			<dd><input type="text" name="u_name"></dd>
 
 		<!-- login_id -->
 			<dt>ログインID(必須)
@@ -50,7 +50,7 @@
 			  <span class="error"><?php echo h($login_idError); ?></span>
 			  <?php endif; ?>
 			</dt>
-			<dd><input type="text" name="login_id" value="<?php echo h($login_id); ?>"></dd>
+			<dd><input type="text" name="login_id"></dd>
 
 		<!-- login_pass -->
 			<dt>パスワード(必須)
