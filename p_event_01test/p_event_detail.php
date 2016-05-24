@@ -14,7 +14,7 @@ require_once "db.inc.php";
 	<script src="../js/jquery-loader.js"></script>
 
  	<link rel="stylesheet" href="../../css/remodal.css">
-    <link rel="stylesheet" href="../../css/remodal-default-theme.css"><script src="../src/jquery-loader.js"></script>
+    <link rel="stylesheet" href="../../css/remodal-default-theme.css">
     <script src="../js/remodal.js"></script>
 
     <style>
