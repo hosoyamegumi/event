@@ -43,6 +43,7 @@ if($_SERVER['REQUEST_METHOD']==="POST"){
 				$_SESSION['authenticated']=TRUE;
 				$_SESSION["name"]=$info["name"];
 				$_SESSION["type_id"]=$info["type_id"];
+				$_SESSION["u_id"]=$info["id"];
 
 				var_dump($_SESSION);
 
