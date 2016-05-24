@@ -31,10 +31,10 @@ require_once 'session.php';
 		<?php if (isset($startError)): ?>
           <div class="error"><?php echo h($startError);?></div>
        <?php endif;?>
-			<p><input type="text" name="start" value="<?php echo h($start);?>"></p>
+			<p><input type="text" name="start" value="<?php echo h($start);?>" placeholder="0000-00-00 00:00:00"></p>
 
 		<p>終了日時</p>
-			<p><input type="text" name="end" value="<?php echo h($end);?>"></p>
+			<p><input type="text" name="end" value="<?php echo h($end);?>" placeholder="0000-00-00 00:00:00"></p>
 
 		<p>場所（必須）</p>
 		<!-- もしエラーがあったら表示 -->
