@@ -9,22 +9,13 @@ require_once "db.inc.php";
 <meta charset="utf-8" />
 <title>イベント詳細｜EventManager</title>
 <link href="../../css/reset.css" rel="stylesheet">
+<link rel="stylesheet" href="../../css/remodal.css">
+ <link rel="stylesheet" href="../../css/remodal-default-theme.css">
 <link rel="stylesheet" type="text/css" href="../../css/layout.css" />
 
 	<script src="../js/jquery-loader.js"></script>
+	<script src="../js/remodal.js"></script>
 
- 	<link rel="stylesheet" href="../../css/remodal.css">
-    <link rel="stylesheet" href="../../css/remodal-default-theme.css"><script src="../src/jquery-loader.js"></script>
-    <script src="../js/remodal.js"></script>
-
-    <style>
-      .remodal-overlay.without-animation.remodal-is-opening,
-      .remodal-overlay.without-animation.remodal-is-closing,
-      .remodal.without-animation.remodal-is-opening,
-      .remodal.without-animation.remodal-is-closing,
-      .remodal-bg.without-animation.remodal-is-opening,
-      .remodal-bg.without-animation.remodal-is-closing { animation: none;}
-  </style>
 </head>
 
 <body>
@@ -52,10 +43,10 @@ require_once "db.inc.php";
 		<dd><?php echo h($u_name)?></dd>
 	</dl>
 	<p>
-	<a href="p_event_list.php"><input type="submit" name="cancel" value="一覧に戻る"></a>
-	<a href="p_event_detail.php"><input type="submit" name="add" value="参加する"></a>
-	<a href="p_event_edit.php"><input type="submit" name="edit" value="編集"></a>
-	<a href="p_event_delete.php" data-remodal-target="modal"><input type="submit" name="delete" value="削除"></a>
+	<input type="submit" name="cancel" value="一覧に戻る">
+	<input type="submit" name="add" value="参加する">
+	<input type="submit" name="edit" value="編集">
+	<input type="submit" name="delete" value="削除" data-remodal-target="modal">
 	</p>
 </div>
 </div>
