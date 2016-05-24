@@ -5,6 +5,7 @@ session_start();
 
 $u_name = $_SESSION["name"];
 $type_id = $_SESSION["type_id"];
+$u_id = $_SESSION["u_id"];
 $aaa = $_SESSION['authenticated'];
 
 //ログイン認証済みでなければログインページへ移動
