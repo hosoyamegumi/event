@@ -55,7 +55,7 @@ require_once "../db.inc.php";
 		  </table>
 
 	<!-- button -->
-		  <a href ="p_user_add.php"><input type="submit" name="add" value="ユーザーの登録" id="button_01"></a>
+		  <input type="submit" name="add" value="ユーザーの登録" id="button_01">
 		</div>
       </div>
     </body>
