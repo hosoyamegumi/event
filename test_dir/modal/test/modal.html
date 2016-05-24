@@ -1,0 +1,72 @@
+
+<head>
+    <script src="../src/jquery-loader.js"></script>
+
+    <link rel="stylesheet" href="../src/remodal.css">
+    <link rel="stylesheet" href="../src/remodal-default-theme.css">
+    <script src="../src/remodal.js"></script>
+
+    
+  <style>
+      .remodal-overlay.without-animation.remodal-is-opening,
+      .remodal-overlay.without-animation.remodal-is-closing,
+      .remodal.without-animation.remodal-is-opening,
+      .remodal.without-animation.remodal-is-closing,
+      .remodal-bg.without-animation.remodal-is-opening,
+      .remodal-bg.without-animation.remodal-is-closing { animation: none;}
+  </style>
+</head>
+
+
+
+
+
+<div class="remodal-bg">
+  <h2>
+	  <a href="#" data-remodal-target="modal">モーダル①</a>
+	  <br>
+	  <a href="#" data-remodal-target="modal2">モーダル②</a>
+  </h2>
+</div>
+
+
+
+
+
+
+
+<!-- モーダルの中身① -->
+
+<div class="remodal" data-remodal-id="modal">
+
+  <a data-remodal-action="close" class="remodal-close"></a>
+
+  <a data-remodal-action="cancel" class="remodal-cancel" href="#">Cancel</a>
+  <a data-remodal-action="" class="remodal-confirm" href="uuuuu.php">OK</a>
+  
+</div>
+
+
+
+
+<!-- モーダルの中身② -->
+
+<div class="remodal" 
+	 data-remodal-id="modal2"
+  	 data-remodal-options="
+	  hashTracking:			false, 
+	  closeOnConfirm:		false, 
+	  closeOnCancel:  		false, 
+	  closeOnEscape: 		false, 
+	  closeOnOutsideClick: 	false, 
+	  modifier : without-animation with-test-class">
+
+  <a data-remodal-action="close" class="remodal-close"></a>
+  
+  <a data-remodal-action="cancel" class="remodal-cancel" href="#">キャンセル</a>
+  <a data-remodal-action="confirm" class="remodal-confirm" href="#">OK</a>
+  
+</div>
+
+
+
