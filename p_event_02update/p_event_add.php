@@ -55,9 +55,9 @@ require_once "../../php/event/f_event_add.php";
 			  </select>
 		</p>
 		<p>詳細</p>
-			<p><textarea name="detail" value="<?php echo h($detail);?>"></textarea></p>
+			<p><textarea name="detail"><?php echo h($detail);?></textarea></p>
 		<p>
-			<input type="submit" name="no" value="キャンセル">
+			<input type="submit" name="cancel" value="キャンセル">
 			<input type="submit" name="add" value="登録">
 		</p>
 	</form>
