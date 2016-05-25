@@ -136,7 +136,7 @@
   vertical-align: middle;
   text-decoration: none;
 
-  border: 0;
+  border:solid 1px #ccc;
   outline: 0;
 }
 
@@ -151,8 +151,8 @@
 }
 
 .remodal-cancel {
-  color: #fff;
-  background: #e57373;
+  color: #000;
+  background: #EEE;
 }
 
 .remodal-cancel:hover,
@@ -236,3 +236,10 @@
 .lt-ie9 .remodal {
   width: 700px;
 }
+
+      .remodal-overlay.without-animation.remodal-is-opening,
+      .remodal-overlay.without-animation.remodal-is-closing,
+      .remodal.without-animation.remodal-is-opening,
+      .remodal.without-animation.remodal-is-closing,
+      .remodal-bg.without-animation.remodal-is-opening,
+      .remodal-bg.without-animation.remodal-is-closing { animation: none;}
