@@ -16,7 +16,7 @@ if(isset($_POST['add'])){
 	$u_name=$_POST['u_name'];
 	$login_id=$_POST['login_id'];
 	$login_pass=$_POST['login_pass'];
-	$grou_id=$_POST['group_id'];
+	$group_id=$_POST['group_id'];
 
 	if($u_name===""){
 		$u_nameError="氏名を入力してください";
