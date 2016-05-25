@@ -25,6 +25,7 @@ $numPages = ceil($hits / 5);
 //GETでPが選択されたかチェックする
  if(isset($_GET["p"])){
 	  	$currentPage=$_GET["p"];
+	  	
 	  }
 	  else{
 		 	$currentPage=1;
