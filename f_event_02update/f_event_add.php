@@ -1,5 +1,5 @@
 <?php
-require_once '../session.php';
+//require_once '../session.php';
 require_once '../util.inc.php';
 require_once '../db.inc.php';
 //ポスト処理が行われたとき
@@ -52,7 +52,7 @@ $detail="";
  		$startError="日付は「0000-00-00 00:00:00」の形式で入力してください。";
  		$isValidated=FALSE;
  	}
- 	
+
  	//終了日時のバリデーション
  	if(!preg_match("/^\d{4}-\d{2}-\d{2}[\s　]\d{2}:\d{2}:\d{2}$/", $end)){
  		$endError="日付は「0000-00-00 00:00:00」の形式で入力してください。";
@@ -94,13 +94,13 @@ $detail="";
 	}
 //	}
 	//キャンセルボタンが押されたときの処理
-	if(isset($_POST["cancel"])){
-		header("Location: p_event_list.php");
-		exit;
-	}
+
 }
 else{
 	$isValidated=FALSE;
 }
+if(isset($_POST["cancel"])){
+	header("Location: p_event_list.php");
+	exit;
+}
 ?>
-
