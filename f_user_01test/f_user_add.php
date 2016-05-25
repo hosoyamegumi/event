@@ -46,7 +46,7 @@ if(isset($_POST['add'])){
 			$stmt=$pdo->prepare($sql);
 			$stmt->execute(array(
 					$login_id,
-					$login_pass,
+					sha1($login_pass."abc"),
 					$u_name,
 					$group_id)
 					);
