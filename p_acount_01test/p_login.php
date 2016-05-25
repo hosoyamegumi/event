@@ -2,7 +2,7 @@
 session_start();
 
 //require_once '../session.php';
-require_once '../db_inc.php';
+require_once '../db.inc.php';
 
 $login_id="";
 $login_pass="";
