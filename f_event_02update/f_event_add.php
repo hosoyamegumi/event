@@ -44,11 +44,15 @@ $detail="";
  	}
 
  	//開催日時のバリデーション
-	if(!preg_match("/^\d{4}-\d{2}-\d{2}[\s　]\d{2}:\d{2}:\d{2}$/", $start)){
+ 	if($start === ""){
+ 		$startError="※開催日時を入力して下さい";
+ 		$isValidated=FALSE;
+ 	}
+	elseif(!preg_match("/^\d{4}-\d{2}-\d{2}[\s　]\d{2}:\d{2}:\d{2}$/", $start)){
  		$startError="日付は「0000-00-00 00:00:00」の形式で入力してください。";
  		$isValidated=FALSE;
  	}
-
+ 	
  	//終了日時のバリデーション
  	if(!preg_match("/^\d{4}-\d{2}-\d{2}[\s　]\d{2}:\d{2}:\d{2}$/", $end)){
  		$endError="日付は「0000-00-00 00:00:00」の形式で入力してください。";
