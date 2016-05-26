@@ -92,17 +92,22 @@ if(isset($_POST["cancel"])){
 	exit;
 }
 
+// if(isset($_POST["no"])){
+// 	header("Refresh: 0; url=p_event_detail.php?id={$id}");
+// 	exit;
+// }
+
 if(isset($_POST["edit"])){
 	//デリート終了後に画面遷移する処理
 	header("Location:p_event_edit.php?id={$id}");
 	exit;
 }
 
-if(isset($_POST["delete"])){
-	//デリート終了後に画面遷移する処理
-	header("Location: p_event_delete.php");
-	exit;
-}
+// if(isset($_POST["delete"])){
+// 	//デリート終了後に画面遷移する処理
+// 	header("Location: p_event_delete.php");
+// 	exit;
+// }
 
 
 ?>

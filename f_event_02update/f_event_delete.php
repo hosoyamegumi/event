@@ -23,7 +23,7 @@ try {
 			$_SESSION["flag"]=TRUE;
 
 			//デリート終了後に画面遷移する処理
-			header("Location:p_event_delete_done.php");
+			header("Refresh: 0; url=p_event_delete_done.php");
 			exit;
  	}
 
