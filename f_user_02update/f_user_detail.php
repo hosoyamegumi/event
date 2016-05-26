@@ -27,7 +27,7 @@ if(isset($_POST['cancel'])){
 	header("Location:p_user_list.php");
 }
 if (isset($_POST['edit'])){
-	header("Location:p_user_edit.php/?id={$u_id}");
+	header("Location:p_user_edit.php?id={$u_id}");
 }
 if(isset($_POST['no'])){
 	header("Refresh:0; url=p_user_detail.php");
