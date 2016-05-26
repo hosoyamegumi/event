@@ -3,15 +3,18 @@
 //セッションの開始
 session_start();
 
-$u_name = $_SESSION["name"];
-$type_id = $_SESSION["type_id"];
-$u_id = $_SESSION["u_id"];
-$aaa = $_SESSION['authenticated'];
+//チェック
+$aaa = $_SESSION["authenticated"];
 
 //ログイン認証済みでなければログインページへ移動
 if ($aaa != TRUE) {
-	exit;
-
-  header("Location: acount/p_login.php");
-
+  header("Location:../account/p_login.php");
+  exit;
 }
+
+//ユーザ名
+$u_name = $_SESSION["name"];
+//管理者・一般
+$type_id = $_SESSION["type_id"];
+//id
+$u_id = $_SESSION["u_id"];
