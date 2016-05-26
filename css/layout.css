@@ -1,0 +1,202 @@
+@CHARSET "UTF-8";
+
+/*--- html ---*/
+html {
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+
+
+
+/*--- body ---*/
+body {
+	height: 100%;
+	font-family: arial,sans-serif;
+	color:#161616;
+	letter-spacing: 0.5px;
+	background-color: #e2c6ff;
+}
+
+
+
+
+/*--- containner ---*/
+#containner{
+	width: 90%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #ffffff;
+}
+
+
+
+
+/*--- header ---*/
+#header {
+	width: 100%;
+	height: 78px;
+	background-color: #b2b2ff;
+}
+
+
+/*--- nav ---*/
+#nav {
+	height: 100%;
+	margin-left: 20px;
+	margin-right: 20px;
+	background-color: #ffbcff;
+}
+
+/*--- logo ---*/
+#logo {
+	height: 38px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	float: left;
+	font-size:180%;
+	background-color: #fff;
+}
+
+/*--- ul ---*/
+ul li a {
+	width: 190px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    display: block;
+    float: left;
+    font-size: 120%;
+    text-align: center;
+    background-color: #fff;
+    transition-property: background-color;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+
+ul li:last-child {
+	padding-right: 0px;
+	float: right;
+}
+
+ul li a:hover {
+	background-color:#d6ffad;
+}
+
+/*--- dropDown ---*/
+#dropDown a {
+	width: 150px;
+}
+
+#check {
+	float: right;
+    padding-right: 10px;
+}
+
+#dropDown_p {
+    margin-right: 20px;
+    font-size: 80%;
+    visibility: hidden;
+}
+
+
+
+
+/*--- main ---*/
+#main {
+	height: auto;
+	margin-top: 50px;
+	margin-left: 20px;
+	margin-right: 20px;
+	letter-spacing: 1px;
+	background-color: #e2ffc6;
+}
+
+#main a {
+	color: #1bb7cd;
+}
+
+
+
+
+/*--- button ---*/
+#button_login {
+	width: 700px;
+	height: 35px;
+	padding-top: 5px;
+    padding-bottom: 5px;
+    color: #ffffff;
+    font-weight: bold;
+	letter-spacing: 1.5px;
+    background-color: #0d93c6;
+    border-style: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#button_login:hover {
+	background-color: #1bb7cd;
+}
+
+
+
+
+/*--- error ---*/
+.error {
+	color: #b81d21;
+    font-size: 90%;
+    margin-left: 10px;
+}
+
+
+
+
+/*--- h1 ---*/
+h1 {
+
+}
+
+
+
+
+/*--- login ---*/
+#login {
+	width: 700px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 100px;
+	background-color: #e7ff45;
+}
+
+.login_f {
+	width: 685px;
+    height: 30px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border-style: groove;
+    -webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.login_f:focus {
+	outline: 0px;
+	border:solid 1px #0d93c6;
+}
+
+
+
+
+/*--- logout ----*/
+#logout {
+	margin-top: 10px;
+}
+
+#logout p {
+	margin-top: 10px;
+}
