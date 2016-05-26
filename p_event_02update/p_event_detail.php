@@ -73,7 +73,9 @@ require_once '../../php/event/f_event_edit.php';
 
 <!-- button -->
 <form method="post">
-		<input type="submit" name="cancel" value="Cancel" id="button_01">
+		<a data-remodal-action="close">
+		<input type="submit" name="no" value="Cancel" id="button_01">
+		</a>
 		<input type="submit" name="ok" value="OK" id="button_01">
 </form>
 </div>
