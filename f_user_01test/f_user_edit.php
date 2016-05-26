@@ -1,7 +1,7 @@
 <?php
 
-  require_once "../util.inc.php";
-  require_once "../db.inc.php";
+  require_once "../../view/util.inc.php";
+  require_once "../../view/db_inc.php";
   //require_once '../session.php';
 
   $u_id=$_GET['id'];
@@ -28,10 +28,10 @@ $group_id=$users['type_id'];
 if(isset($_POST['save'])){
 	$isValidated=TRUE;
 
-	//$u_name=$_POST['u_name'];
-	//$login_id=$_POST['login_id'];
-	//$login_pass=$_POST['login_pass'];
-	//$group_id=$_POST['group_id'];
+	$u_name=$_POST['u_name'];
+	$login_id=$_POST['login_id'];
+	$login_pass=$_POST['login_pass'];
+	$group_id=$_POST['group_id'];
 
 	if($u_name===""){
 		$u_nameError="氏名を入力してください";
@@ -61,9 +61,11 @@ if(isset($_POST['save'])){
 					);
 
 
-			exit;
 		}
 
+
+		header("Location:p_user_edit_done.php?id={$u_id}");
+		exit;
 		}
 	}
 	catch (PDOException $e){
