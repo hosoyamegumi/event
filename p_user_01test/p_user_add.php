@@ -1,8 +1,6 @@
 <!-- php -->
 <?php
-// require_once "../session.php";
-// require_once "../util.inc.php";
-// require_once "../db.inc.php";
+require_once "../../php/user/f_user_add.php";
 ?>
 
 <!-- html -->
@@ -12,7 +10,7 @@
 <!-- head -->
   <head>
 	<meta charset="utf-8">
-	<title>ユーザー登録｜EventManager</title>
+	<title>ユーザ登録｜EventManager</title>
 	<link href="../../css/reset.css" rel="stylesheet">
 	<link href="../../css/layout.css" rel="stylesheet">
   </head>
@@ -59,7 +57,7 @@
 			  <span class="error"><?php echo h($login_passError); ?></span>
 			  <?php endif; ?>
 			</dt>
-			<dd><input type="text" name="login_pass" placeholder="パスワード"></dd>
+			<dd><input type="password" name="login_pass" placeholder="パスワード"></dd>
 
 		<!-- g_mane -->
 			<dt>所属グループ(必須)

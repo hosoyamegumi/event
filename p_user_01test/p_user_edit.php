@@ -1,8 +1,6 @@
 <!-- php -->
 <?php
-//  require_once "util.inc.php";
-//  require_once "db.inc.php";
-//  require_once 'session.php';
+require_once "../../php/user/f_user_edit.php";
 ?>
 
 <!-- html -->

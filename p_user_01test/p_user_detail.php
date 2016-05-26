@@ -1,7 +1,5 @@
 <?php
-// require_once "../session.php";
-// require_once "../util.inc.php";
-// require_once "../db.inc.php";
+require_once "../../php/user/f_user_detail.php";
 ?>
 
 
@@ -11,7 +9,7 @@
 <!-- head -->
   <head>
 	<meta charset="utf-8">
-	<title>ユーザー詳細｜EventManager</title>
+	<title>ユーザ詳細｜EventManager</title>
 
   <!-- css -->
 	<link href="../../css/reset.css" rel="stylesheet">
@@ -35,28 +33,23 @@
 	  <div id="main">
 	    <h1>ユーザ詳細</h1>
 
-	<!-- page -->
-		<div id="page">
-		  <p>ページの表示</p>
-		  <?php //echo $this->pagination->create_links(); ?>
-		</div>
 
 	<!-- dl -->
 		<dl>
 		  <dt>ID</dt>
-		  <dd><?php echo h($u_id); ?></dd>
+		  <dd><?php echo h($userId); ?></dd>
 		  <dt>氏名</dt>
-		  <dd><?php echo h($u_name); ?></dd>
+		  <dd><?php echo h($userName); ?></dd>
 		  <dt>所属グループ</dt>
 		  <dd><?php echo h($g_name); ?></dd>
 		</dl>
 
 	<!-- button -->
-		<p>
+		<form action="" method="post">
 		  <input type="submit" name="cancel" value="一覧に戻る" id="button_02">
 		  <input type="submit" name="edit" value="編集" id="button_04">
 		  <input type="submit" name="delete" value="削除" id="button_03" data-remodal-target="modal">
-		</p>
+		</form>
 
 	  </div>
 	</div>
@@ -70,7 +63,7 @@
 
 	<!-- button -->
 	  <form method="post">
-		<input type="submit" name="cancel" value="Cancel" id="buttom_03">
+		 <a data-remodal-action="close"><input type="submit" name="no" value="Cancel" id="buttom_03"></a>
 		<input type="submit" name="ok" value="OK" id="button_01">
 	  </form>
 	</div>

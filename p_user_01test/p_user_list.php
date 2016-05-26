@@ -1,8 +1,5 @@
-<!-- php -->
 <?php
-require_once "../session.php";
-require_once "../util.inc.php";
-require_once "../db.inc.php";
+require_once "../../php/user/f_user_list.php";
 ?>
 
 <!-- html -->
@@ -30,8 +27,43 @@ require_once "../db.inc.php";
 
 	<!-- pege -->
 		  <div id="page">
-		    <p>ページの表示</p>
-			<?php //echo $this->pagination->create_links(); ?>
+		    <!--<p>ページの表示</p>  -->
+			<?php
+
+    if ($numPages > 1) {
+      //--------------------
+      // 前のページへのリンク
+      //--------------------
+      if ($currentPage == 1) {
+        echo "前のページ | ";
+      }
+      else {
+        echo '<a href="?p='.h($prevPage).'">前のページ</a> | ';
+      }
+      //--------------------
+      // ページ番号のリンク
+      //--------------------
+      for ($p = 1; $p <= $numPages; $p++) {
+        if ($p == $currentPage) {
+          echo " ".h($p)." |";
+        }
+        else {
+          echo ' <a href="?p='.h($p).'">'.h($p).'</a> |';
+        }
+      }
+      //--------------------
+      // 次のページへのリンク
+      //--------------------
+      if ($currentPage == $numPages) {
+        echo " 次のページ";
+      }
+      else {
+        echo ' <a href="?p='.h($nextPage).'">次のページ</a>';
+      }
+    }
+    ?>
+
+
 		  </div>
 
 	<!-- table -->
@@ -44,18 +76,18 @@ require_once "../db.inc.php";
 		    </tr>
 		    <?php foreach ($users as $user): ?>
 			<tr>
-			  <td><?php echo h($user["u_id"]); ?></td>
-			  <td><?php echo h($user["u_name"]); ?></td>
+			  <td><?php echo h($user["userId"]); ?></td>
+			  <td><?php echo h($user["userName"]); ?></td>
 			  <td><?php echo h($user["g_name"]); ?></td>
 			  <td>
-			    <a href ="p_user_detail.php?id=<?php echo h($user["id"]); ?>"><input type="submit" name="detail" value="詳細" class="button_001"></a>
+			    <a href ="p_user_detail.php?id=<?php echo h($user["userId"]); ?>"><input type="submit" name="detail" value="詳細" class="button_001"></a>
 			  </td>
 			</tr>
 			<?php endforeach; ?>
 		  </table>
 
 	<!-- button -->
-		  <input type="submit" name="add" value="ユーザーの登録" id="button_01">
+		  <a href="p_user_add.php"><input type="submit" name="add" value="ユーザーの登録" id="button_01"></a>
 		</div>
       </div>
     </body>
