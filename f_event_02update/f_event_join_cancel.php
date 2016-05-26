@@ -41,22 +41,7 @@ if(isset($_POST["clear"])){
 	}
 }//isValidated==TRUEの終わり
 
-if(isset($_POST["cancel"])){
-	header("Location:p_event_list.php");
-	exit;
-}
 
-if(isset($_POST["edit"])){
-	//デリート終了後に画面遷移する処理
-	header("Location:p_event_edit.php?id={$id}");
-	exit;
-}
-
-if(isset($_POST["delete"])){
-	//デリート終了後に画面遷移する処理
-	header("Location: p_event_delete.php");
-	exit;
-}
 
 ?>
 

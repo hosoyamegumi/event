@@ -20,15 +20,11 @@ try {
 			$dbobj=$pdo->prepare("DELETE FROM events WHERE id = ?");
 			$dbobj->execute(array($id));
 
+			$_SESSION["flag"]=TRUE;
+
 			//デリート終了後に画面遷移する処理
 			header("Location:p_event_delete_done.php");
 			exit;
-// 		}
-		//「キャンセル」が押されたとき
-// 		if(isset($_POST["cancel"])){
-// 			header("Location: carlist.php");
-// 			exit;
-// 		}
  	}
 
 	//--------------------

@@ -3,6 +3,8 @@ require_once '../db.inc.php';
 require_once '../util.inc.php';
 require_once '../session.php';
 
+unset($_SESSION["flag"]);
+
 try {
 
   //--------------------
