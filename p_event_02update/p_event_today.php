@@ -1,23 +1,22 @@
 <?php
 require_once "../session.php";
-require_once '../../php/event/f_event_list.php';
+require_once '../../php/event/f_event_today.php';
 
 ?>
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="utf-8" />
-<title>イベント一覧｜EventManager</title>
+<title>本日のイベント｜EventManager</title>
+<link href="../../css/reset.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../css/layout.css" />
 </head>
 <body>
 <div id="containner">
-<?php include "../header.php"; ?>
+	<?php include "../header.php"; ?>
 	<div id="main">
-	<h1>イベント一覧</h1>
-	<!-- ページネーション挿入 -->
-	<div id="page">
+	<h1>本日のイベント</h1>
+
 	 <?php
     if ($numPages > 1) {
       //--------------------
@@ -51,9 +50,7 @@ require_once '../../php/event/f_event_list.php';
       }
     }
     ?>
-	</div>
-
-	<table>
+	<table border="1">
 		<tr>
 			<th>タイトル</th>
 			<th>開始日時</th>
@@ -61,24 +58,22 @@ require_once '../../php/event/f_event_list.php';
 			<th>対象グループ</th>
 			<th>詳細</th>
 		</tr>
-		<?php foreach ($events as $list): ?>
+			<?php foreach ($events as $today): ?>
 		<tr>
-			<td>
-				<?php echo h($list["title"]);?>
-				<?php foreach ($attends as $attend): ?>
-				<?php if($list[0]==$attend["event_id"]) echo "<span>参加</span>";?>
+			<td><?php echo h($today["title"]);?>
+			<?php foreach ($attends as $attend): ?>
+				<?php if($today[0]==$attend["event_id"]) echo "<span>参加</span>";?>
 				<?php endforeach; ?>
 			</td>
-			<td><?php echo h($list["start"]);?></td>
-			<td><?php echo h($list["place"]);?></td>
-			<td><?php echo h($list["name"]);?></td>
+			<td><?php echo h($today["start"]);?></td>
+			<td><?php echo h($today["place"]);?></td>
+			<td><?php echo h($today["group_id"]);?></td>
 			<td>
-			<a href ="p_event_detail.php?id=<?php echo h($list[0]);?>"><input type="submit" name="detail" value="詳細"></a>
+			<a href ="p_event_detail.php?id=<?php echo h($today[0]);?>"><input type="submit" name="detail" value="詳細" class="button_001"></a>
 			</td>
 		</tr>
 		<?php endforeach; ?>
 	</table>
-	<a href ="p_event_add.php"><input type="submit" name="add" value="イベントの登録"></a>
 	</div>
 </div>
 </body>
