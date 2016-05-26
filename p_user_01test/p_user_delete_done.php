@@ -1,5 +1,8 @@
 <!-- php -->
 <?php
+// require_once "../session.php";
+// require_once "../util.inc.php";
+// require_once "../db.inc.php";
 ?>
 
 <!-- html -->
@@ -19,7 +22,7 @@
 	<div id="containner">
 
 <!-- header_include -->
-<?php include "../header.php"; ?>
+<!-- <//?php include "../header.php"; ?> -->
 
 <!-- main -->
 	  <div id="main">
