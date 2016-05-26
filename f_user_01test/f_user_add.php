@@ -2,22 +2,16 @@
 //require_once '../session.php';
 require_once '../db.inc.php';
 require_once '../util.inc.php';
-
-
 $u_name="";
 $login_id="";
 $login_pass="";
 $group_id="";
-
-
 if(isset($_POST['add'])){
 	$isValidated=TRUE;
-
 	$u_name=$_POST['u_name'];
 	$login_id=$_POST['login_id'];
 	$login_pass=$_POST['login_pass'];
 	$group_id=$_POST['group_id'];
-
 	if($u_name===""){
 		$u_nameError="氏名を入力してください";
 		$isValidated=FALSE;
@@ -30,14 +24,11 @@ if(isset($_POST['add'])){
 			$login_passError="パスワードを入力してください";
 			$isValidated=FALSE;
 	}
-	var_dump($grou_id);
+	//var_dump($group_id);
 	if($isValidated==TRUE){
-
 		try{
-
 			//dbの接続
 			$pdo=db_init();
-
 			$sql="
 			INSERT INTO users
 				(login_id, login_pass,name,type_id,group_id,created)
@@ -50,8 +41,7 @@ if(isset($_POST['add'])){
 					$u_name,
 					$group_id)
 					);
-
-			header("Location: user_add_done.php");
+			header("Location:p_user_add_done.php");
 			exit;
 		}
 		catch (PDOException $e){
@@ -59,11 +49,8 @@ if(isset($_POST['add'])){
 			exit;
 			}
 		}
-
 		}
 	if(isset($_POST["cancel"])){
 	header("Location: p_user_list.php");
-
 	}
-
 ?>
