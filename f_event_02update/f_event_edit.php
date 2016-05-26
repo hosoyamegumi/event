@@ -58,7 +58,7 @@ try {
 						WHERE id=?");
 				$dbobj->execute(array($title,$start,$end,$place,$group_id,$detail,$id));
 				//編集後に移動するためのヘッダー
- 				header("Location:p_event_edit_done.php");
+ 				header("Location:p_event_edit_done.php?id={$id}");
 				exit;
 			}
 
