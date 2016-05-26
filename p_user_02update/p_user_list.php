@@ -87,7 +87,7 @@ require_once "../../php/user/f_user_list.php";
 		  </table>
 
 	<!-- button -->
-		  <input type="submit" name="add" value="ユーザーの登録" id="button_01">
+		  <a href="p_user_add.php"><input type="submit" name="add" value="ユーザーの登録" id="button_01"></a>
 		</div>
       </div>
     </body>
