@@ -1,8 +1,6 @@
-<!-- php -->
 <?php
 require_once "../../php/user/f_user_add.php";
 ?>
-
 <!-- html -->
 <!DOCTYPE html>
 <html lang="ja">
@@ -10,9 +8,9 @@ require_once "../../php/user/f_user_add.php";
 <!-- head -->
   <head>
 	<meta charset="utf-8">
-	<title>ユーザ登録｜EventManager</title>
-	<link href="../../css/reset.css" rel="stylesheet">
-	<link href="../../css/layout.css" rel="stylesheet">
+	<title>ユーザー登録｜EventManager</title>
+<!-- 	<link href="../../css/reset.css" rel="stylesheet"> -->
+<!-- 	<link href="../../css/layout.css" rel="stylesheet"> -->
   </head>
 
 <!-- body -->
@@ -20,7 +18,7 @@ require_once "../../php/user/f_user_add.php";
 	<div id="containner">
 
 <!-- header_include -->
-<?php include "../header.php"; ?>
+<!-- <//?php include "../header.php"; ?> -->
 
 <!-- main -->
 	  <div id="main">
@@ -61,10 +59,7 @@ require_once "../../php/user/f_user_add.php";
 
 		<!-- g_mane -->
 			<dt>所属グループ(必須)
-		<!-- g_name_error -->
-			  <?php if (isset($g_nameError)): ?>
-			  <span class="error"><?php echo h($g_nameError); ?></span>
-			  <?php endif; ?>
+
 			</dt>
 			<dd>
 			  <select name="group_id">
