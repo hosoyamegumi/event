@@ -2,27 +2,40 @@
 //require_once '../session.php';
 require_once '../db.inc.php';
 require_once '../util.inc.php';
-$u_name="";
+$userName="";
 $login_id="";
 $login_pass="";
 $group_id="";
 if(isset($_POST['add'])){
 	$isValidated=TRUE;
-	$u_name=$_POST['u_name'];
+	$userName=$_POST['userName'];
 	$login_id=$_POST['login_id'];
 	$login_pass=$_POST['login_pass'];
 	$group_id=$_POST['group_id'];
-	if($u_name===""){
-		$u_nameError="氏名を入力してください";
+if(preg_match("/[\s　]/u", $userName)){
+		$userNameError="氏名を入力してください";
 		$isValidated=FALSE;
 	}
-	if ($login_id===""){
+	if ($userName ==""){
+		$userNameError="氏名を入力してください";
+		$isValidated=FALSE;
+	}
+
+	if (preg_match("/[\s　]/", $login_id)){
+		$login_idError="IDを入力してください";
+		$isValidated=FALSE;
+	}
+	if ($login_id ==""){
 		$login_idError="IDを入力してください";
 		$isValidated=FALSE;
 	}
 	if($login_pass===""){
 			$login_passError="パスワードを入力してください";
 			$isValidated=FALSE;
+	}
+	if (preg_match("/[\s　]/", $login_pass)){
+		$login_passError="パスワードを正しく入力してください";
+		$isValidated=FALSE;
 	}
 	//var_dump($group_id);
 	if($isValidated==TRUE){
@@ -38,7 +51,7 @@ if(isset($_POST['add'])){
 			$stmt->execute(array(
 					$login_id,
 					sha1($login_pass."abc"),
-					$u_name,
+					$userName,
 					$group_id)
 					);
 			header("Location:p_user_add_done.php");
