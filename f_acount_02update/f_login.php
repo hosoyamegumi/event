@@ -39,7 +39,10 @@ if($_SERVER['REQUEST_METHOD']==="POST"){
 			$stmt->execute(array($login_id,sha1($login_pass."abc")));
 			$info=$stmt->fetch();
 
-
+			if ($info==FALSE){
+				$ErrorId="ログインIDまたはパスワードが間違っています";
+				$isValidated=FALSE;
+			}
 			if($info !=FALSE){
 				$_SESSION['authenticated']=TRUE;
 				$_SESSION["name"]=$info["name"];
