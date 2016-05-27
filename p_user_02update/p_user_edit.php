@@ -52,19 +52,11 @@ require_once "../../php/user/f_user_edit.php";
 
 		<!-- login_pass -->
 			<dt>パスワード(変更の場合のみ)
-		<!-- logim_pass_error -->
-			  <?php if (isset($login_passError)): ?>
-			  <span class="error"><?php echo h($login_passError); ?></span>
-			  <?php endif; ?>
 			</dt>
 			<dd><input type="text" name="login_pass" placeholder="パスワード"></dd>
 
 		<!-- g_mane -->
 			<dt>所属グループ(必須)
-		<!-- g_name_error -->
-			  <?php if (isset($g_nameError)): ?>
-			  <span class="error"><?php echo h($g_nameError); ?></span>
-			  <?php endif; ?>
 			</dt>
 			<dd>
 			  <select name="group_id">
