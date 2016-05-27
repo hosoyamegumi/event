@@ -4,6 +4,9 @@ require_once '../db.inc.php';
 
 //var_dump($_SESSION);
 
+//日本語の曜日を出力する用の配列
+$weekday=array("日","月","火","水","木","金","土");
+
 
 if(isset($_SESSION["flag"])){
 	header("Location:p_event_list.php");

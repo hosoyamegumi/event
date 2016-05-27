@@ -31,6 +31,12 @@ try {
 			$titleError="※タイトルを入力して下さい";
 			$isValidated=FALSE;
 		}
+
+		if(preg_match("/[\s　]/", $title)){
+			$titleError="※タイトルを入力して下さい";
+			$isValidated=FALSE;
+		}
+
 	 	//開催日時のバリデーション
  		if($start === ""){
  			$startError="※開催日時を入力して下さい";
@@ -50,6 +56,12 @@ try {
 			$placeError="※場所を入力して下さい";
 			$isValidated=FALSE;
 		}
+
+		if(preg_match("/[\s　]/", $place)){
+			$placeError="※場所を入力して下さい";
+			$isValidated=FALSE;
+		}
+
 		if($isValidated==TRUE){
 			if(isset($_POST["save"])){
 				$dbobj=$pdo->prepare

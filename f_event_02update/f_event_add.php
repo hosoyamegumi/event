@@ -34,15 +34,23 @@ $detail="";
 // 	$detail="テスト";
 // 	$registered_by=1;
  	//タイトルのバリデーション
+
 	if($title === ""){
  		$titleError="※タイトルを入力して下さい";
  		$isValidated=FALSE;
  	}
+
+ 	if(preg_match("/[\s　]/", $title)){
+ 		$titleError="※タイトルを入力して下さい";
+ 		$isValidated=FALSE;
+ 	}
+
  	//開催日時のバリデーション
  	if($start === ""){
  		$startError="※開催日時を入力して下さい";
  		$isValidated=FALSE;
  	}
+
 	elseif(!preg_match("/^\d{4}-\d{2}-\d{2}[\s　]\d{2}:\d{2}:\d{2}$/", $start)){
  		$startError="日付は「0000-00-00 00:00:00」の形式で入力してください。";
  		$isValidated=FALSE;
@@ -57,6 +65,12 @@ $detail="";
  		$placeError="※場所を入力して下さい";
  		$isValidated=FALSE;
  	}
+
+ 	if(preg_match("/[\s　]/", $place)){
+ 		$placeError="※場所を入力して下さい";
+ 		$isValidated=FALSE;
+ 	}
+
  	if($isValidated==TRUE){
 		try {
 			//--------------------
@@ -69,8 +83,8 @@ $detail="";
 			$eventAdd=$pdo->prepare("INSERT INTO events
 					(title, start, end, place, group_id, detail, registered_by, created)
 					VALUES
-					(? ,? ,? ,? ,1 ,? ,? ,NOW() )");
-			$eventAdd->execute(array($title, $start, $end, $place, $detail,$registered_by));
+					(? ,? ,? ,? ,? ,? ,? ,NOW() )");
+			$eventAdd->execute(array($title, $start, $end, $place,$group_id, $detail,$registered_by));
 
 			header("Location: p_event_add_done.php");
 			exit;

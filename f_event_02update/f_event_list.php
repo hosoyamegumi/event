@@ -5,6 +5,10 @@ require_once '../session.php';
 
 unset($_SESSION["flag"]);
 
+//日本語の曜日を出力する用の配列
+$weekday=array("日","月","火","水","木","金","土");
+
+
 try {
 
   //--------------------
