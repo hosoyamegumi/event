@@ -9,8 +9,8 @@ require_once "../../php/user/f_user_add.php";
   <head>
 	<meta charset="utf-8">
 	<title>ユーザー登録｜EventManager</title>
-<!-- 	<link href="../../css/reset.css" rel="stylesheet"> -->
-<!-- 	<link href="../../css/layout.css" rel="stylesheet"> -->
+    <link href="../../css/reset.css" rel="stylesheet">
+    <link href="../../css/layout.css" rel="stylesheet">
   </head>
 
 <!-- body -->
@@ -33,11 +33,11 @@ require_once "../../php/user/f_user_add.php";
 		<!-- u_name -->
 		    <dt>氏名(必須)
 		<!-- u_name_error -->
-			  <?php if (isset($u_nameError)): ?>
-			  <span class="error"><?php echo h($u_nameError); ?></span>
+			  <?php if (isset($userNameError)): ?>
+			  <span class="error"><?php echo h($userNameError); ?></span>
 			  <?php endif; ?>
 			</dt>
-			<dd><input type="text" name="u_name" value="<?php echo h($u_name); ?>" placeholder="氏名"></dd>
+			<dd><input type="text" name="userName" value="<?php echo h($userName); ?>" placeholder="氏名"></dd>
 
 		<!-- login_id -->
 			<dt>ログインID(必須)
