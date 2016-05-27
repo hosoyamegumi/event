@@ -35,11 +35,11 @@ require_once "../../php/user/f_user_edit.php";
 		<!-- u_name -->
 		    <dt>氏名(必須)
 		<!-- u_name_error -->
-			  <?php if (isset($u_nameError)): ?>
-			  <span class="error"><?php echo h($u_nameError); ?></span>
+			  <?php if (isset($userNameError)): ?>
+			  <span class="error"><?php echo h($userNameError); ?></span>
 			  <?php endif; ?>
 			</dt>
-			<dd><input type="text" name="u_name" value="<?php echo h($u_name); ?>" placeholder="氏名"></dd>
+			<dd><input type="text" name="userName" value="<?php echo h($userName); ?>" placeholder="氏名"></dd>
 
 		<!-- login_id -->
 			<dt>ログインID(必須)
@@ -52,11 +52,19 @@ require_once "../../php/user/f_user_edit.php";
 
 		<!-- login_pass -->
 			<dt>パスワード(変更の場合のみ)
+		<!-- logim_pass_error -->
+			  <?php if (isset($login_passError)): ?>
+			  <span class="error"><?php echo h($login_passError); ?></span>
+			  <?php endif; ?>
 			</dt>
 			<dd><input type="text" name="login_pass" placeholder="パスワード"></dd>
 
 		<!-- g_mane -->
 			<dt>所属グループ(必須)
+		<!-- g_name_error -->
+			  <?php if (isset($g_nameError)): ?>
+			  <span class="error"><?php echo h($g_nameError); ?></span>
+			  <?php endif; ?>
 			</dt>
 			<dd>
 			  <select name="group_id">
