@@ -9,7 +9,8 @@ require_once '../../php/event/f_event_list.php';
 <head>
 <meta charset="utf-8" />
 <title>イベント一覧｜EventManager</title>
-<link rel="stylesheet" type="text/css" href="../css/layout.css" />
+	<link href="../../css/reset.css" rel="stylesheet">
+	<link href="../../css/layout.css" rel="stylesheet">
 </head>
 <body>
 <div id="containner">
@@ -69,7 +70,13 @@ require_once '../../php/event/f_event_list.php';
 				<?php if($list[0]==$attend["event_id"]) echo "<span>参加</span>";?>
 				<?php endforeach; ?>
 			</td>
-			<td><?php echo h($list["start"]);?></td>
+			<td>
+				<?php
+				$date=new DateTime(h($list["start"]));
+				$w = $weekday[$date->format('w')];
+				echo $date->format('Y年m月d日')."({$w})";
+				?>
+			</td>
 			<td><?php echo h($list["place"]);?></td>
 			<td><?php echo h($list["name"]);?></td>
 			<td>

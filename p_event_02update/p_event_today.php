@@ -8,8 +8,8 @@ require_once '../../php/event/f_event_today.php';
 <head>
 <meta charset="utf-8" />
 <title>本日のイベント｜EventManager</title>
-<link href="../../css/reset.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../css/layout.css" />
+	<link href="../../css/reset.css" rel="stylesheet">
+	<link href="../../css/layout.css" rel="stylesheet">
 </head>
 <body>
 <div id="containner">
@@ -65,9 +65,15 @@ require_once '../../php/event/f_event_today.php';
 				<?php if($today[0]==$attend["event_id"]) echo "<span>参加</span>";?>
 				<?php endforeach; ?>
 			</td>
-			<td><?php echo h($today["start"]);?></td>
+			<td>
+				<?php
+				$date=new DateTime(h($today["start"]));
+				$w = $weekday[$date->format('w')];
+				echo $date->format('Y年m月d日')."({$w})";
+				?>
+			</td>
 			<td><?php echo h($today["place"]);?></td>
-			<td><?php echo h($today["group_id"]);?></td>
+			<td><?php echo h($today["name"]);?></td>
 			<td>
 			<a href ="p_event_detail.php?id=<?php echo h($today[0]);?>"><input type="submit" name="detail" value="詳細" class="button_001"></a>
 			</td>

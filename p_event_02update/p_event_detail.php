@@ -35,9 +35,21 @@ require_once '../../php/event/f_event_edit.php';
 			<?php endif; ?>
 		</dd>
 		<dt>開催日時</dt>
-		<dd><?php echo h($event["start"]);?></dd>
+		<dd>
+				<?php
+				$date=new DateTime(h($event["start"]));
+				$w = $weekday[$date->format('w')];
+				echo $date->format('Y年m月d日')."({$w})";
+				?>
+			</dd>
 		<dt>終了日時</dt>
-		<dd><?php echo h($event["end"]);?></dd>
+		<dd>
+			<?php
+				$date=new DateTime(h($event["end"]));
+				$w = $weekday[$date->format('w')];
+				echo $date->format('Y年m月d日')."({$w})";
+				?>
+		</dd>
 		<dt>場所</dt>
 		<dd><?php echo h($event["place"]);?></dd>
 		<dt>対象グループ</dt>
